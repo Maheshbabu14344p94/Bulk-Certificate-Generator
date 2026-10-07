@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CertiFlow — Bulk Certificate Generator</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<div class="shell">
+<header><div class="brand"><span class="mark">C</span><div><b>CertiFlow</b><small>Bulk Certificate Studio</small></div></div><span class="pill">FASTAPI · RELATIONAL DB</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">CERTIFICATE OPERATIONS</p><h1>Generate hundreds of certificates from one request.</h1><p class="sub">Validate recipients, process them independently, track live progress, and retrieve finished PDFs from a single workflow.</p></div><div class="hero-card"><div class="orb"></div><b>Bulk-first</b><span>One job · many recipients</span></div></section>
+<section class="grid">
+<div class="panel form-panel"><div class="panel-head"><div><h2>Create generation job</h2><p>Use one predefined certificate template.</p></div></div>
+<form id="jobForm">
+<label>Event name<input name="event_name" value="Frontend Development Bootcamp" required></label>
+<div class="two"><label>Course<input name="course_name" value="Advanced React" required></label><label>Issuer<input name="issuer_name" value="Fermor Academy" required></label></div>
+<label>Issue date<input type="date" name="issue_date" required></label>
+<label>Recipients <span id="count">2</span><textarea id="recipients" rows="7">Mahesh Babu, mahesh@example.com
+Ananya Rao, ananya@example.com</textarea><small>One recipient per line: Name, email</small></label>
+<button>Start bulk generation <span>→</span></button>
+</form></div>
+<div class="panel status-panel"><div class="panel-head"><div><h2>Job monitor</h2><p id="jobLabel">No active job</p></div><span id="status" class="status">IDLE</span></div>
+<div class="metric"><div><strong id="progress">0%</strong><span>overall progress</span></div><div class="bar"><i id="bar"></i></div></div>
+<div class="stats"><div><b id="total">0</b><span>Total</span></div><div><b id="done">0</b><span>Completed</span></div><div><b id="failed">0</b><span>Failed</span></div></div>
+<div id="results" class="results"><p class="muted">Create a job to see recipient-level status and certificate downloads.</p></div></div>
+</section>
+</main>
+<footer>CertiFlow · Built for reliable bulk generation</footer>
+</div>
+<script src="/static/app.js"></script>
+</body></html>
